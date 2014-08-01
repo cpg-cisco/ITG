@@ -54,18 +54,56 @@
 
 		<div class="container">
 
-			<!-- Main component for a primary marketing message or call to action -->
-			<div class="jumbotron">
-				<h1>Interactive Troubleshooting Tool</h1>
-				<p>
-					This is Interactive torubleshooting tool for CPG's Edge series product.
-				</p>
-				<p>
-					<a class="btn btn-lg btn-primary" href="#" role="button">Get Started&raquo;</a>
-					<a class="btn btn-lg btn-primary" href="template.html" role="button">Check Template&raquo;</a>
-				</p>
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">This is the step name</h3>
+				</div>
+				<div class="panel-body">
+					<h4>Please check the following steps:</h4>
+					<ol>
+						<li>
+							<span>get console connection</span>
+							<p>
+								detailed description for this step goes here
+							</p>
+						</li>
+						<li>
+							<span>get console connection</span>
+							<p>
+								detailed description for this step goes here
+							</p>
+						</li>
+						<li>
+							<span>get console connection</span>
+							<p>
+								detailed description for this step goes here
+							</p>
+						</li>
+						<li>
+							<span>....</span>
+							<p>
+								detailed description for this step goes here
+							</p>
+						</li>
+					</ol>
+					<h4>Please select the result you got:</h4>
+					<form>
+						<div class="form-inline">
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="1"/>
+									The box is not pingable via network </label>
+							</p>
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="2"/>
+									I'm able to SSH onto the box </label>
+							</p>
+						</div>
+						<button type="button" class="btn btn-default" id="submit">Submit</button>
+					</form>
+				</div>
 			</div>
-			<!-- Main component for a primary marketing message or call to action -->
 
 		</div>
 		<!-- /container -->
@@ -75,5 +113,24 @@
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="./js/jquery.min.js"></script>
 		<script src="./assets/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#submit').click(function(){
+					if($('input[name=results]:checked').val() == null){
+						alert('Please choose the result you got!');
+					}
+					else {
+						switch($('input[name=results]:checked').val()){
+							case "1":
+							     window.location.href = "./template_step_1.html";
+							     break;
+							case "2":
+							     window.location.href = "./template_step_2.html";
+							     break;
+						}
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
