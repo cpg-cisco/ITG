@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Huang Ruqiang">
+
+		<title>Cisco-CPG interactive troubleshooting Tool</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="./css/navbar-fixed-top.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar">&nbsp;</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">ITG-CPG</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" id="navigation_bar">
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right" id="navigation_bar_right">
+
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">troubleshooting</h3>
+				</div>
+				<div class="panel-body">
+					<h4>Please check the following steps:</h4>
+					<ol>
+						<li>
+							<span>Hold “reset” button until CE300 power off, then release “reset” button.</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>After reboot, CE300 should enter factory mode, the output of CE300 will stay at Stage 1  with only the white Cisco logo being displayed</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>Telnet to access CE300 with the recorded IP address telnet X.X.X.X</span>
+							<p>
+								a)	Account name: root
+								<br>
+								b)	Password: (default is cisco)
+							</p>
+						</li>
+						<li>
+							<span>Create log Generate logs by running log.sh.</span>
+							<p>
+								It will generate a file called
+								<b>debug_log.tar.gz in /tmp directory </b>
+							</p>
+						</li>
+						<li>
+							<span>Send log to Cisco TAC support for further analysis</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>Issue “power off” command</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>Once all the LED panel lights are off, unplug/replug power</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>Press Power button to start the unit</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+					</ol>
+					<h4>Please select the result you got:</h4>
+					<form>
+						<div class="form-inline">
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="1"/>
+										The unit is accessed via ssh </label>
+							</p>
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="2"/>
+										The unit is still not be accessed via ssh </label>
+							</p>
+						</div>
+						<button type="button" class="btn btn-default" id="submit">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+
+		</div>
+		<!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="./assets/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#submit').click(function() {
+					if ($('input[name=results]:checked').val() == null) {
+						alert('Please choose the result you got!');
+					} else {
+						switch($('input[name=results]:checked').val()) {
+							case "1":
+								window.location.href = "./step_1_6.html";
+								break;
+							case "2":
+								window.location.href = "./step_1_8.html";
+								break;
+						}
+					}
+				});
+			});
+		</script>
+		<script src="./js/step.js"></script>
+	</body>
+</html>
