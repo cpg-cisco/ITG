@@ -25,28 +25,18 @@
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
+						<span class="icon-bar">&nbsp;</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#">ITG-CPG</a>
 				</div>
 				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="./index.html">Home</a>
-						</li>
-						<li>
-							<a href="./timeline.html">Timeline</a>
-						</li>
-						<li>
-							<a href="./about.html">About</a>
-						</li>
+					<ul class="nav navbar-nav" id="navigation_bar">
+						
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active">
-							<a href="./index.html">Fixed top</a>
-						</li>
+					<ul class="nav navbar-nav navbar-right" id="navigation_bar_right">
+						
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
@@ -100,7 +90,9 @@
 									I'm able to SSH onto the box </label>
 							</p>
 						</div>
-						<button type="button" class="btn btn-default" id="submit">Submit</button>
+						<button type="button" class="btn btn-default" id="submit">
+							Submit
+						</button>
 					</form>
 				</div>
 			</div>
@@ -114,23 +106,23 @@
 		<script src="./js/jquery.min.js"></script>
 		<script src="./assets/js/bootstrap.min.js"></script>
 		<script>
-			$(document).ready(function(){
-				$('#submit').click(function(){
-					if($('input[name=results]:checked').val() == null){
+			$(document).ready(function() {
+				$('#submit').click(function() {
+					if ($('input[name=results]:checked').val() == null) {
 						alert('Please choose the result you got!');
-					}
-					else {
-						switch($('input[name=results]:checked').val()){
+					} else {
+						switch($('input[name=results]:checked').val()) {
 							case "1":
-							     window.location.href = "./template_step_1.html";
-							     break;
+								window.location.href = "./template_step_1.html";
+								break;
 							case "2":
-							     window.location.href = "./template_step_2.html";
-							     break;
+								window.location.href = "./template_step_2.html";
+								break;
 						}
 					}
 				});
 			});
 		</script>
+		<script src="./js/step.js"></script>
 	</body>
 </html>
