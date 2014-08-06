@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Cisco-CPG interactive troubleshooting Tool</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="./css/navbar-fixed-top.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar">&nbsp;</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">ITG-CPG</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" id="navigation_bar">
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right" id="navigation_bar_right">
+
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Unit check</h3>
+				</div>
+				<div class="panel-body">
+					<h4>Verify the unit really fails</h4>
+					<ol>
+						<li>
+							<span>Unplug the power supply </span>
+							<p>
+
+							</p>
+						</li>
+						<li>
+							<span>Press power button to start the unit</span>
+							<p>
+
+							</p>
+						</li>
+						<li>
+							<span>Check again to see if the unit is reachable at IP level</span>
+							<p>
+
+							</p>
+						</li>
+					</ol>
+
+					<h4></h4>
+					<form>
+						<div class="form-inline">
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="1"/>
+									Check whether unit is reachable again </label>
+							</p>
+													</div>
+						<button type="button" class="btn btn-default" id="submit">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+
+		</div>
+		<!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="./assets/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#submit').click(function() {
+					if ($('input[name=results]:checked').val() == null) {
+						alert('Please choose the result you got!');
+					} else {
+						switch($('input[name=results]:checked').val()) {
+							case "1":
+								window.location.href = "./step_1_8.html";
+								break;
+							
+						}
+					}
+				});
+			});
+		</script>
+		<script src="./js/step.js"></script>
+	</body>
+</html>
