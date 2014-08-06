@@ -1,1 +1,155 @@
-success jump testing interface,please delete when producing
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Huang Ruqiang">
+
+		<title>Cisco-CPG interactive troubleshooting Tool</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="./css/navbar-fixed-top.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar">&nbsp;</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">ITG-CPG</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav" id="navigation_bar">
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right" id="navigation_bar_right">
+
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">recovery</h3>
+				</div>
+				<div class="panel-body">
+					<h4>Please check the following steps:</h4>
+					<ol>
+						<li>
+							<span>ssh&nbsp;<b>root@X.X.X.X</b></span>
+							<p>
+								password: (default is cisco)
+							</p>
+						</li>
+						<li>
+							<span>Create log Generate logs by running log.sh.</span>
+							<p>
+								It will generate a file called <b>debug_log.tar.gz in /tmp directory</b>
+							</p>
+						</li>
+						<li>
+							<span>Send log to Cisco TAC support for further analysis</span>
+							<p>
+								a)	# /etc/init.d/freedesktop stop
+								<br>
+								b)	# /etc/init.d/freedesktop start
+								<br>
+								c)	# xfce4-session&
+								<br>
+								d)	# pkill chrome
+
+							</p>
+						</li>
+						<li>
+							<span>Once the above commands take effects, user could see CE300 desktop for short period and chrome will restart again.</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>Once chrome is restarted, the user should utilize the latest “AppSpace Edge 300 Wizard” from AppSpace to reinstall AppSpace player.</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+						<li>
+							<span>After reinstalling the AppSpace player, the CE300 should be back to work.</span>
+							<p>
+								&nbsp;
+							</p>
+						</li>
+					</ol>
+
+					<li>
+						<span><b>*Note: The latest version of “AppSpace Edge 300 Wizard” is 5.0.3 v3.</b></span>
+						<p>
+							&nbsp;
+						</p>
+					</li>
+
+					<h4>Please select the result you got:</h4>
+					<form>
+						<div class="form-inline">
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="1"/>
+										CE300 boots up normally </label>
+							</p>
+							<p>
+								<label class="radio inline control-label">
+									<input type="radio" name="results" value="2"/>
+										The screen is still black or gray </label>
+							</p>
+						</div>
+						<button type="button" class="btn btn-default" id="submit">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+
+		</div>
+		<!-- /container -->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="./assets/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#submit').click(function() {
+					if ($('input[name=results]:checked').val() == null) {
+						alert('Please choose the result you got!');
+					} else {
+						switch($('input[name=results]:checked').val()) {
+							case "1":
+								window.location.href = "./step_3_2.html";
+								break;
+							case "2":
+								window.location.href = "./step_1_5.html";
+								break;
+						}
+					}
+				});
+			});
+		</script>
+		<script src="./js/step.js"></script>
+	</body>
+</html>
