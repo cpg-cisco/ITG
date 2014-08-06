@@ -56,37 +56,15 @@
 
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<h3 class="panel-title">Facotry mode</h3>
+					<h3 class="panel-title">Succeed in solving problems</h3>
 				</div>
 				<div class="panel-body">
-					<h4>Please check the following steps:</h4>
-					<ol>
-						<li>
-							<span>The CE300 has entered the facotory mode. </span>
-							<p>
-								Please unplug the power cord for exiting factory mode and then perform reboot.  
-							</p>
-						</li>
-					</ol>
-					<h4>Please select the result you got:</h4>
-					<form>
-						<div class="form-inline">
-							<p>
-								<label class="radio inline control-label">
-									<input type="radio" name="results" value="1"/>
-									I have solved the problem successfully </label>
-							</p>
-							<p>
-								<label class="radio inline control-label">
-									<input type="radio" name="results" value="2"/>
-									I haven't solved the problem yet </label>
-							</p>
+					<h4>Congratulations!</h4>
+					<p>
+						You have successfully solved the problem through troubleshooting guide. Thanks for use.
+					</p>
 
-						</div>
-						<button type="button" class="btn btn-default" id="submit">
-							Submit
-						</button>
-					</form>
+					<h4></h4>
 				</div>
 			</div>
 		</div>
@@ -95,26 +73,5 @@
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-				<script src="./js/jquery.min.js"></script>
-		<script src="./assets/js/bootstrap.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('#submit').click(function() {
-					if ($('input[name=results]:checked').val() == null) {
-						alert('Please choose the result you got!');
-					} else {
-						switch($('input[name=results]:checked').val()) {
-							case "1":
-								window.location.href = "./step_3_2.html";
-								break;
-							case "2":
-								window.location.href = "./step_4_1.html";
-								break;
-						}
-					}
-				});
-			});
-		</script>
-		<script src="./js/step.js"></script>
 	</body>
 </html>

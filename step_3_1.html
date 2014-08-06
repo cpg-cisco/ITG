@@ -119,5 +119,26 @@
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
+				<script src="./js/jquery.min.js"></script>
+		<script src="./assets/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#submit').click(function() {
+					if ($('input[name=results]:checked').val() == null) {
+						alert('Please choose the result you got!');
+					} else {
+						switch($('input[name=results]:checked').val()) {
+							case "1":
+								window.location.href = "./step_3_2.html";
+								break;
+							case "2":
+								window.location.href = "./step_4_1.html";
+								break;
+						}
+					}
+				});
+			});
+		</script>
+		<script src="./js/step.js"></script>
 	</body>
 </html>
