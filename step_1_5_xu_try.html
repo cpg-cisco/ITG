@@ -33,104 +33,111 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav" id="navigation_bar">
-						
+
 					</ul>
 					<ul class="nav navbar-nav navbar-right" id="navigation_bar_right">
-						
+
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
-
-		<div class="container">
-
-			<div class="panel panel-info">
-				<div class="panel-heading">
-					<h3 class="panel-title">Reimaging</h3>
-				</div>
-				<div class="panel-body">
-					<h4>Please reimagine your CE300, and then try again.</h4>
-					<ol>
-						<li>
-							<span> Download the necessary files. </span>
-							<p>
-								Download smi-usb-sunbird-1.5rb1-delivery.gz from
-								http://cisco.blob.core.windows.net/image/smi-usb-sunbird-1.5rb1-delivery.gz
-								Download smi.sh from
-								https://dl.dropboxusercontent.com/u/84736663/smi.sh
-							</p>
-						</li>
-						<li>
-							<span>Copy smi.sh to a functional CE300 unit. Put it on Desktop.</span>
-
-						</li>
-						<li>
-							<span>Prepare a USB dirve with at least 2Gb storage.</span>
-							<p>
-								Format it to FAT32 on windows.
-								Set “Volume lable” as “SMI-USB”
-							</p>
-							<img src="pics for step_1_8/step_1_8_3.png" width="450" height="450">
-						</li>
-						<li>
-							<span>Copy smi-usb-sunbird-1.5rb1-delivery.gz to SMI-USB drive.</span>
-						</li>
-						<li>
-							<span>Plug the SMI-USB drive into the side USB port on CE300.</span>
-						</li>
-						<li>
-							<span>Open a terminal window and change to root privilege with password “cisco”.</span>
-							<p>
-								<img src="pics for step_1_8/step1_8_6(1).png" width="250" height="350"> 　　 <img src="pics for step_1_8/step1_8_6(2).png" width="500" height="350">
-							</p>
-						</li>
-						<li>
-							<span>In terminal window input follow commands and run createsmiusb script. </span>
-							<p>
-								# cd /apps/localconfig/student/Desktop/
-								# chmod 777 smi.sh
-								# ./smi.sh
-							</p>
-							<img src="pics for step_1_8/step1_8_7.png" width="500" height="350">
-						</li>
-						<li>
-							<span>After preparation finished, it should show “finished” in terminal.</span>
-
-						</li>
-						<li>
-							<span> Double click “USB SmartInstall” icon on Desktop and follow promote window to finish system update.</span>
-							<p>
-								<img src="pics for step_1_8/step1_8_8.png" width="200" height="150">
-							</p>
-						</li>
-						<li>
-							<span> Instead of step 8, just hold reset button until CE300 temporary power off, then release reset
-								button. Update should finish in 20 minutes. </span>
-						</li>
-					</ol>
-				
-				<h4>Please select the result you got:</h4>
-				
-				<form>
-					<div class="form-inline">
-						<p>
-							<label class="radio inline control-label">
-								<input type="radio" name="results" value="1"/>
-									CE300 has recovered from black screen. </label>
-						</p>
-						<p>
-							<label class="radio inline control-label">
-								<input type="radio" name="results" value="2"/>
-									CE300 has not recovered from black screen </label>
-						</p>
+		<nobr>			<div class="container">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">Reimaging</h3>
 					</div>
-					<button type="button" class="btn btn-default" id="submit">
-						Submit
-					</button>
-				</form>
+					<div class="panel-body">
+						<h4>Please reimagine your CE300, and then try again.</h4>
+						<ol>
+							<li>
+								<span> Download the necessary files. </span>
+								<p>
+									Download smi-usb-sunbird-1.5rb1-delivery.gz from
+									<br>
+									http://cisco.blob.core.windows.net/image/smi-usb-sunbird-1.5rb1-delivery.gz
+									<br>
+									Download smi.sh from
+									<br>
+									https://dl.dropboxusercontent.com/u/84736663/smi.sh
+								</p>
+							</li>
+							<li>
+								<span>Copy smi.sh to a functional CE300 unit. Put it on Desktop.</span>
+
+							</li>
+							<li>
+								<span>Prepare a USB dirve with at least 2Gb storage.</span>
+								<p>
+									Format it to FAT32 on windows.
+									<br>
+									Set “Volume lable” as “SMI-USB”
+								</p>
+								<img src="pics for step_1_5/step_1_5_3.png" width="450" height="450">
+							</li>
+							<li>
+								<span>Copy smi-usb-sunbird-1.5rb1-delivery.gz to SMI-USB drive.</span>
+							</li>
+							<li>
+								<span>Plug the SMI-USB drive into the side USB port on CE300.</span>
+							</li>
+							<li>
+								<span>Open a terminal window and change to root privilege with password “cisco”.</span>
+								<p>
+									<img src="pics for step_1_5/step_1_5_6(1).png" width="200" height="280" align="middle"> 　 <img src="pics for step_1_5/step_1_5_6(2).png" width="400" height="280" align="middle">
+								</p>
+							</li>
+							<li>
+								<span>In terminal window input follow commands and run createsmiusb script. </span>
+								<p>
+									# cd /apps/localconfig/student/Desktop/
+									<br>
+									# chmod 777 smi.sh
+									<br>
+									# ./smi.sh
+								</p>
+								<img src="pics for step_1_5/step_1_5_7.png" width="500" height="350">
+							</li>
+							<li>
+								<span>After preparation finished, it should show “finished” in terminal.</span>
+
+							</li>
+							<li>
+								<span> Double click “USB SmartInstall” icon on Desktop and follow promote window to finish system update.</span>
+								<p>
+									<img src="pics for step_1_5/step_1_5_8.png" width="200" height="150">
+								</p>
+							</li>
+							<li>
+								<span> Instead of step 8, just hold reset button until CE300 temporary power off, then release reset
+									button. Update should finish in 20 minutes.
+									<br>
+								</span>
+							</li>
+						</ol>
+
+						<h4>Please select the result you got:</h4>
+
+						<form>
+							<div class="form-inline">
+								<p>
+									<label class="radio inline control-label">
+										<input type="radio" name="results" value="1"/>
+											CE300 has recovered from black screen. </label>
+								</p>
+								<p>
+									<label class="radio inline control-label">
+										<input type="radio" name="results" value="2"/>
+											CE300 has not recovered from black screen </label>
+								</p>
+							</div>
+							<button type="button" class="btn btn-default" id="submit">
+								Submit
+							</button>
+						</form>
+					</div>
+				</div>
 			</div>
-			</div>
-		</div>
+		</nobr>
 		<!-- /container -->
 
 		<!-- Bootstrap core JavaScript
