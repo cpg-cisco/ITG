@@ -62,31 +62,39 @@
 					<h4>Please check the following steps:</h4>
 					<ol>
 						<li>
-							<span>Log onto the unit via SSH to do recovery</span>
+							<span>Log onto the unit via SSH to do recovery.</span>
 							<p>
-								SSH:<span style="color:#00F">root@X.X.X.X</span>
+								SSH:root@X.X.X.X
 							</p>
 							<p>
 								password:(default is Cisco)
 							</p>
 						</li>
 						<li>
-							<span>Create log</span>
+							<span>Create log.</span>
 							<p>
-								Generate logs by running <span style="color:#00F">log.sh</span>.
-								It will generate a file called debug_log.tar.gz in /tmp directory
+								Generate logs by running log.sh.
+								It will generate a file called debug_log.tar.gz in /tmp directory.
 							</p>
 
 						</li>
 						<li>
-							<span>Send log to Cisco TAC support for further analysis</span>
+							<span>Send log to Cisco TAC support for further analysis.</span>
 						</li>
 						<li>
 							<span>Issue following commands to recovery the desktop:</span>
-							<p># /etc/init.d/freedesktop stop</p>
-							<p># /etc/init.d/freedesktop start</p>
-							<p># xfce4-session&</p>
-							<p># pkill chrome</p>						
+							<p>
+								# /etc/init.d/freedesktop stop
+							</p>
+							<p>
+								# /etc/init.d/freedesktop start
+							</p>
+							<p>
+								# xfce4-session&
+							</p>
+							<p>
+								# pkill chrome
+							</p>
 						</li>
 						<li>
 							<span>Once the above commands take effects, you could see CE300 desktop for short period and chrome will restart again.</span>
@@ -96,7 +104,9 @@
 						</li>
 						<li>
 							<span>After reinstalling the AppSpace player, the CE300 should be back to work. </span>
-							<p>*Note: The latest version of “AppSpace Edge 300 Wizard” is 5.0.3 v3. </p>
+							<p>
+								*Note: The latest version of “AppSpace Edge 300 Wizard” is 5.0.3 v3.
+							</p>
 						</li>
 					</ol>
 					<h4>Please select the result you got:</h4>
