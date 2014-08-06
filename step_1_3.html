@@ -46,7 +46,7 @@
 
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<h3 class="panel-title">troubleshooting</h3>
+					<h3 class="panel-title">Check through telnet</h3>
 				</div>
 				<div class="panel-body">
 					<h4>Please check the following steps:</h4>
@@ -111,11 +111,6 @@
 									<input type="radio" name="results" value="1"/>
 										The unit is accessed via ssh </label>
 							</p>
-							<p>
-								<label class="radio inline control-label">
-									<input type="radio" name="results" value="2"/>
-										The unit is still not be accessed via ssh </label>
-							</p>
 						</div>
 						<button type="button" class="btn btn-default" id="submit">
 							Submit
@@ -140,10 +135,7 @@
 					} else {
 						switch($('input[name=results]:checked').val()) {
 							case "1":
-								window.location.href = "./step_1_6.html";
-								break;
-							case "2":
-								window.location.href = "./step_1_8.html";
+								window.location.href = "./step_1_4.html";
 								break;
 						}
 					}
